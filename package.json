@@ -1,0 +1,22 @@
+{
+  "name": "raspi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "johnny-five": "^2.1.0",
+    "mongodb": "^4.6.0",
+    "onoff": "^6.0.3",
+    "raspi-io": "^11.0.0",
+    "rpi-ws281x-native-fixed": "^1.0.3"
+  }
+}
