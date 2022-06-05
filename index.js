@@ -5,6 +5,28 @@ var Gpio = require('onoff').Gpio; //include onoff to interact with the GPIO
 var rain = new Gpio(23, 'out');
 var cloud = new Gpio(24, 'out');
 
+var Sound = require('node-aplay');
+ 
+// fire and forget:
+ 
+// with ability to pause/resume:
+var music = new Sound('sounds/jb.mp3');
+music.play();
+ 
+setTimeout(function () {
+    music.pause(); // pause the music after five seconds
+}, 5000);
+ 
+setTimeout(function () {
+    music.resume(); // and resume it two seconds after pausing
+}, 7000);
+ 
+// you can also listen for various callbacks:
+music.on('complete', function () {
+    console.log('Done with playback!');
+});
+
+
 const ws2821x = require('rpi-ws281x-native-fixed');
 const options = {
   dma: 10,
